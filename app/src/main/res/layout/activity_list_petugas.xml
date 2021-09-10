@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".admin.listPetugas.ListPetugas">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="120dp"
+        android:id="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_petugas"
+        android:layout_height="120dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvPetugas"
+        android:layout_below="@id/imgLogo"
+        android:visibility="gone"
+        android:layout_marginBottom="100dp"
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBadKoneksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/koneksi_internet_buruk"
+        android:textColor="#E60505"
+        android:textSize="30sp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/tambahUser"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:src="@drawable/ic_add_floating"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

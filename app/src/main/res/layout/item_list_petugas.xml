@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:gravity="center"
+    android:id="@+id/btnNamePetugas"
+    android:text="@string/petugas"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="15dp"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:textAllCaps="false"
+    android:background="@drawable/bg_button"
+    android:layout_height="45dp"/>

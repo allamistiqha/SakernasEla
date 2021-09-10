@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SakernasEla</string>
+    <string name="petugas">Petugas</string>
+    <string name="admin">Admin</string>
+    <string name="survei_angkatan_kerja_nasional_2021">Survei angkatan kerja nasional 2021</string>
+    <string name="masuk">Masuk</string>
+    <string name="passowrd">Passowrd</string>
+    <string name="username">Username</string>
+    <string name="login_admin">Login Admin</string>
+    <string name="login_petugas">Login Petugas</string>
+    <string name="list_petugas">List Petugas</string>
+    <string name="koneksi_internet_buruk">koneksi internet buruk</string>
+    <string name="tambah_petugas">Tambah petugas</string>
+    <string name="password_petugas">Password petugas</string>
+    <string name="nama_petugas">Nama petugas</string>
+    <string name="sedang_memproses">Sedang memproses</string>
+    <string name="persentase">Persentase</string>
 </resources>
