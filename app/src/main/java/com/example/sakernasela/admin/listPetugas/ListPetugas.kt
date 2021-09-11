@@ -15,8 +15,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sakernasela.R
 import com.example.sakernasela.admin.AdminAct
 import com.example.sakernasela.admin.listPetugas.persentase.PersentaseKerja
+import com.example.sakernasela.admin.pembagianData.PembagianDataPetugas
+import com.example.sakernasela.admin.pembagianData.PengisianDataChild
 import com.example.sakernasela.databinding.ActivityListPetugasBinding
+import com.example.sakernasela.entity.DataParentKeluarga
 import com.example.sakernasela.entity.LoginPetugasModel
+import com.example.sakernasela.utils.Constants
 import com.example.sakernasela.utils.Constants.DB
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.database.DataSnapshot
@@ -60,14 +64,50 @@ class ListPetugas : AppCompatActivity() {
     }
 
     private fun onClick(petugas: LoginPetugasModel) {
-        val i = Intent(this, PersentaseKerja::class.java)
-        val bundle = Bundle()
-        bundle.putString("name", petugas.userName)
-        bundle.putString("persen", petugas.persen)
-        bundle.putString("id", petugas.persen)
-        i.putExtras(bundle)
-        startActivity(i)
-        finish()
+        val pilih = intent.extras
+
+        if (pilih?.getString("p").toString() == "pilih"){
+            progress.show()
+            setDataPetugas(pilih?.getString("id").toString(),
+                pilih?.getString("kk").toString(),
+                pilih?.getString("kepala").toString(),
+                pilih?.getString("alm").toString(),
+                petugas.userName)
+        }else{
+            val i = Intent(this, PersentaseKerja::class.java)
+            val bundle = Bundle()
+            bundle.putString("name", petugas.userName)
+            bundle.putString("persen", petugas.persen)
+            bundle.putString("id", petugas.persen)
+            i.putExtras(bundle)
+            startActivity(i)
+            finish()
+        }
+    }
+
+    private fun setDataPetugas(
+        id: String,
+        kk: String,
+        kepala: String,
+        alm: String,
+        petugas: String
+    ) {
+        val data  = DataParentKeluarga(
+            id, kk,
+            kepala,
+            alm,
+            petugas
+        )
+
+        DB.child("ParentKeluarga").child(id)
+            .setValue(data)
+            .addOnCompleteListener {
+                progress.dismiss()
+                Toast.makeText(applicationContext, "data berhasil dimasukkan", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PembagianDataPetugas::class.java)
+                startActivity(intent)
+                finish()
+            }
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -100,6 +140,11 @@ class ListPetugas : AppCompatActivity() {
     }
 
     private fun onItemClcik() {
+        val pilih = intent.extras
+
+        if (pilih?.getString("p").toString() == "pilih"){
+            b.tambahUser.visibility = View.GONE
+        }
         b.tambahUser.setOnClickListener {
             bottomSheet()
         }

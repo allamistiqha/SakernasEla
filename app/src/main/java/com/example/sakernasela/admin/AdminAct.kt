@@ -18,7 +18,11 @@ class AdminAct : AppCompatActivity() {
 
     private fun onClick() {
         bind.listPetugas.setOnClickListener {
-            startActivity(Intent(this, ListPetugas::class.java))
+            val bundle = Bundle()
+            val intent = Intent(this, ListPetugas::class.java)
+            bundle.putString("p", "test")
+            intent.putExtras(bundle)
+            startActivity(intent)
             finish()
         }
 

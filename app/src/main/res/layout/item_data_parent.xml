@@ -55,4 +55,14 @@
             android:textSize="20sp"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:id="@+id/edtPetugas"
+        android:hint="@string/pilih_petugas"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="false"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

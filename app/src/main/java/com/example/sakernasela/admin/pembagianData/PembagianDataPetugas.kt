@@ -40,7 +40,7 @@ class PembagianDataPetugas : AppCompatActivity() {
 
         val layoutManager = LinearLayoutManager(this)
         b.rvPetugas.layoutManager = layoutManager
-        adapterData = AdapterDataParentKeluarga(dataParent) { petugas: DataParentKeluarga ->
+        adapterData = AdapterDataParentKeluarga(dataParent, this) { petugas: DataParentKeluarga ->
             onClick(
                 petugas
             )
