@@ -49,16 +49,16 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_login"
         android:layout_gravity="center_horizontal"
-        android:text="@string/tambah_anggota_keluarga"
+        android:text="@string/ubah"
         />
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:textAllCaps="false"
         android:layout_marginTop="25dp"
-        android:id="@+id/btnSelesai"
+        android:id="@+id/btnHapus"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_login"
         android:layout_gravity="center_horizontal"
-        android:text="@string/selesai"
+        android:text="@string/hapus"
         />
 </androidx.appcompat.widget.LinearLayoutCompat>

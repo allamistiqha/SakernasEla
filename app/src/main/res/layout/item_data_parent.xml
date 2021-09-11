@@ -14,6 +14,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:text="@string/no_kk"
+            android:id="@+id/kk"
             android:textSize="20sp"
             android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
@@ -30,6 +31,7 @@
             android:layout_width="wrap_content"
             android:text="@string/bpk"
             android:textSize="20sp"
+            android:id="@+id/nama"
             android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -45,6 +47,7 @@
             android:layout_width="wrap_content"
             android:text="@string/alamt"
             android:textSize="20sp"
+            android:id="@+id/al"
             android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"

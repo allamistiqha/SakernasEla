@@ -26,5 +26,7 @@
     <string name="selesai">Selesai</string>
     <string name="no_kk">No.kk :  </string>
     <string name="bpk">Bpk. </string>
-    <string name="alamt">Alamt :  </string>
+    <string name="alamt">Alamat :  </string>
+    <string name="ubah">Ubah</string>
+    <string name="hapus">Hapus</string>
 </resources>
