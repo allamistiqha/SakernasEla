@@ -3,9 +3,8 @@ package com.example.sakernasela.admin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.sakernasela.R
 import com.example.sakernasela.admin.listPetugas.ListPetugas
-import com.example.sakernasela.admin.pembagianData.PembagianData
+import com.example.sakernasela.admin.pembagianData.PembagianDataPetugas
 import com.example.sakernasela.databinding.ActivityAdminBinding
 
 class AdminAct : AppCompatActivity() {
@@ -24,7 +23,7 @@ class AdminAct : AppCompatActivity() {
         }
 
         bind.pembagianData.setOnClickListener {
-            startActivity(Intent(this, PembagianData::class.java))
+            startActivity(Intent(this, PembagianDataPetugas::class.java))
             finish()
         }
     }

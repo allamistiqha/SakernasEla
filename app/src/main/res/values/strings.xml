@@ -15,4 +15,16 @@
     <string name="nama_petugas">Nama petugas</string>
     <string name="sedang_memproses">Sedang memproses</string>
     <string name="persentase">Persentase</string>
+    <string name="nomer_kk">Nomer Kartu Keluarga</string>
+    <string name="kepala_keluarga">Nama kepala keluarga</string>
+    <string name="alamat">Alamat</string>
+    <string name="tambah">Tambah Keluarga</string>
+    <string name="pengisian_kartu_keluarga">Pengisian Kartu Keluarga</string>
+    <string name="tambah_anggota_keluarga">Tambah Anggota Keluarga</string>
+    <string name="nomer_induk">Nomer induk</string>
+    <string name="nama_anggota_keluarga">Nama anggota keluarga</string>
+    <string name="selesai">Selesai</string>
+    <string name="no_kk">No.kk :  </string>
+    <string name="bpk">Bpk. </string>
+    <string name="alamt">Alamt :  </string>
 </resources>
