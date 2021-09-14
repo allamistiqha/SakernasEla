@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="45dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/status_perkawinan"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/_1_belum_kawin"
+        android:id="@+id/bk"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/_2_kawin"
+        android:id="@+id/k"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/_3_cerai_hidup"
+        android:id="@+id/ch"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/_4_cerai_mati"
+        android:id="@+id/cm"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

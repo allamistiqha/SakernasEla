@@ -29,6 +29,16 @@ class PrefManager {
         return getSharedPreference(context).getString("id", "")
     }
 
+    fun setUserName(context: Context, id: String?){
+        val editor = getSharedPreference(context).edit()
+        editor.putString("name", id)
+        editor.apply()
+    }
+
+    fun getUserName(context: Context): String? {
+        return getSharedPreference(context).getString("name", "")
+    }
+
     fun clear(context: Context) {
         val editor = getSharedPreference(context).edit()
 //        editor.remove("Data")

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="25dp"
-    tools:context=".petugas.PetugasAct">
+    tools:context=".petugas.ListKeluarga">
+
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:id="@+id/k"
-        android:gravity="center_horizontal"
+        android:id="@+id/l"
         android:textSize="20sp"
-        android:text="@string/daftar_responden"
+        android:gravity="center_horizontal"
+        android:text="@string/keluarga_responden"
         android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/rvPetugas"
+        android:layout_below="@id/l"
         android:layout_marginTop="15dp"
         android:visibility="gone"
-        android:layout_below="@id/k"
         android:layout_marginBottom="80dp"
         android:layout_height="match_parent"/>
 

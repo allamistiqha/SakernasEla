@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SakernasEla">
         <activity
+            android:name=".petugas.PengisianDataKeluarga"
+            android:exported="true" />
+        <activity
+            android:name=".petugas.ListKeluarga"
+            android:exported="true" />
+        <activity
             android:name=".admin.pembagianData.ListChildKeluarga"
             android:exported="true" />
         <activity

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.sakernasela.R
 import com.example.sakernasela.databinding.ActivityLoginPetugasBinding
 import com.example.sakernasela.entity.LoginPetugasModel
 import com.example.sakernasela.utils.Constants.DB
@@ -45,7 +44,7 @@ class LoginPetugas : AppCompatActivity() {
                     if (snapshot.exists()){
                         for (snap in snapshot.children){
                             val data = snap.getValue(LoginPetugasModel::class.java)
-                            cekPassword(data?.pass, data?.idData)
+                            cekPassword(data?.pass, data?.idData, data?.userName)
                         }
                     }else{
                         Toast.makeText(applicationContext, "username tidak ditemukan", Toast.LENGTH_SHORT).show()
@@ -59,11 +58,13 @@ class LoginPetugas : AppCompatActivity() {
             })
     }
 
-    private fun cekPassword(pass: String?, idData: String?) {
+    private fun cekPassword(pass: String?, idData: String?, userName: String?) {
         if (bind.edtPass.text.toString() == pass){
             prefManager.setUserId(baseContext, idData)
+            prefManager.setUserName(baseContext, userName)
             Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, PetugasAct::class.java))
+            finish()
         }else{
             Toast.makeText(applicationContext, "Password anda salah", Toast.LENGTH_SHORT).show()
             bind.edtPass.setText("")
