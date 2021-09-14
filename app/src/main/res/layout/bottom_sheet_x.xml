@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="45dp"
+        android:paddingBottom="65dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apakah_status_pekerjaan_anda"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/berusaha_sendiri"
+            android:id="@+id/Xa"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/berusaha_dibantu_pekerja_tidak_tetap_pekerja_keluarga_tidak_dibayar"
+            android:id="@+id/Yb"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/berusaha_dibantu_pekerja_tetap_dan_dibayar"
+            android:id="@+id/Yc"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/buruh_karyawan_pegawai"
+            android:id="@+id/Yd"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/pekerja_bebas_dipertanian"
+            android:id="@+id/Ye"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/pekerja_bebas_di_nonpertanian"
+            android:id="@+id/Yf"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="15dp"
+            android:background="@drawable/bg_login"
+            android:layout_marginTop="25dp"
+            android:text="@string/pekerja_keluarga_tidak_dibayar"
+            android:id="@+id/Yg"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -65,7 +65,7 @@ class PetugasAct : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     private fun setData(rvPetugas: RecyclerView) {
         val name = prefManager.getUserName(baseContext)
-        val id = prefManager.getUserId(baseContext)
+//        val id = prefManager.getUserId(baseContext)
 
         adapterData.notifyDataSetChanged()
         Constants.DB.child("ParentKeluarga")

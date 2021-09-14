@@ -54,10 +54,11 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:textAllCaps="false"
+        android:textColor="#FD0000"
         android:layout_marginTop="25dp"
         android:id="@+id/btnHapus"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_login"
+        android:background="@drawable/bg_hapus"
         android:layout_gravity="center_horizontal"
         android:text="@string/hapus"
         />

@@ -131,6 +131,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_saat_ini_sedang_mengikuti_pelatihan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtFak"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -399,6 +412,24 @@
                     android:layout_height="match_parent" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="dari pekerjaan anda"
+                android:hint="@string/jumlah_karyawan_yang_dibayar"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtXxx"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -445,6 +476,23 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edtAa"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Untuk mempersiapkan atau mencari pekerjaan Anda"
+                android:layout_height="wrap_content"
+                android:hint="@string/berapa_lama_waktu_yang_di_butuhkan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAaa"
                     android:focusableInTouchMode="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

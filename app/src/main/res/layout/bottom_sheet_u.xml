@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="45dp"
+    >
+
+    <TextView
+        android:id="@+id/pertanyaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apakah_ada_jaminan_anda_kembali_bekerja_pada_tempat_kerja_sekarang"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:padding="15dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/ya"
+        android:id="@+id/Ua"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="15dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/tidak_akan_kembali"
+        android:id="@+id/Ub"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:padding="15dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/tidak_yakin_kembali"
+        android:id="@+id/Uc"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:padding="15dp"
+        android:background="@drawable/bg_login"
+        android:layout_marginTop="25dp"
+        android:text="@string/tidak_tahu"
+        android:id="@+id/Ud"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
