@@ -1,5 +1,6 @@
 package com.example.sakernasela.petugas
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -121,10 +122,10 @@ class PengisianDataKeluarga : AppCompatActivity() {
         b.edtL.setOnClickListener { bottomShetI("L") }
         b.edtM.setOnClickListener { bottomShetI("M") }
         b.edtN.setOnClickListener { bottomShetI("N") }
-//        b.edtO.setOnClickListener { bottomShetO() }
-//        b.edtP.setOnClickListener { bottomShetP() }
-//        b.edtQ.setOnClickListener { bottomShetQ() }
-//        b.edtR.setOnClickListener { bottomShetR() }
+        b.edtO.setOnClickListener { bottomShetE("O") }
+        b.edtP.setOnClickListener { bottomShetE("P") }
+        b.edtQ.setOnClickListener { bottomShetE("Q") }
+        b.edtR.setOnClickListener { bottomShetE("R") }
 //        b.edtS.setOnClickListener { bottomShetS() }
 //        b.edtT.setOnClickListener { bottomShetT() }
 //        b.edtU.setOnClickListener { bottomShetU() }
@@ -258,6 +259,7 @@ class PengisianDataKeluarga : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun bottomShetE(s: String) {
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_e)
         val satu = bottomSheetDialog.findViewById<TextView>(R.id.Ea)
@@ -267,6 +269,7 @@ class PengisianDataKeluarga : AppCompatActivity() {
         bottomSheetDialog.show()
 
         if (s == "E"){
+            pertanyaan?.text = "Apakah anda lulus sekolah ?"
             satu?.setOnClickListener {
                 b.edtE.setText(satu.text.toString())
                 bottomSheetDialog.dismiss()
@@ -277,6 +280,7 @@ class PengisianDataKeluarga : AppCompatActivity() {
             }
         }
         if (s == "F"){
+            pertanyaan?.text = "Apakah anda pernah mengikuti pelatihan  khusus dan mendapatkan sertifikat ?"
             satu?.setOnClickListener {
                 b.edtF.setText(satu.text.toString())
                 bottomSheetDialog.dismiss()
@@ -287,12 +291,58 @@ class PengisianDataKeluarga : AppCompatActivity() {
             }
         }
         if (s == "G"){
+            pertanyaan?.text = "Apakah saat ini anda sedang mengikuti pelatihan khusus ?"
             satu?.setOnClickListener {
                 b.edtG.setText(satu.text.toString())
                 bottomSheetDialog.dismiss()
             }
             dua?.setOnClickListener {
                 b.edtG.setText(dua.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+        }
+
+        if (s == "O"){
+            pertanyaan?.text = "Dalam seminggu terakhir, apakah Anda bekerja ?"
+            satu?.setOnClickListener {
+                b.edtO.setText(satu.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+            dua?.setOnClickListener {
+                b.edtO.setText(dua.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+        }
+        if (s == "P"){
+            pertanyaan?.text = "Dalam seminggu terakhir, apakah anda membantu kegiatan usaha untuk memperoleh uang ?"
+            satu?.setOnClickListener {
+                b.edtP.setText(satu.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+            dua?.setOnClickListener {
+                b.edtP.setText(dua.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+        }
+        if (s == "Q"){
+            pertanyaan?.text = "Dalam seminggu terakhir, apakah  Anda membantu pekerjaan keluarga/orang lain ?"
+            satu?.setOnClickListener {
+                b.edtQ.setText(satu.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+            dua?.setOnClickListener {
+                b.edtQ.setText(dua.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+        }
+        if (s == "R"){
+            pertanyaan?.text = "Apakah Anda sebenarnya memiliki pekerjaan, tetapi seminggu terakhir sedang tidak bekerja ?"
+            satu?.setOnClickListener {
+                b.edtR.setText(satu.text.toString())
+                bottomSheetDialog.dismiss()
+            }
+            dua?.setOnClickListener {
+                b.edtR.setText(dua.text.toString())
                 bottomSheetDialog.dismiss()
             }
         }
