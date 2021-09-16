@@ -179,4 +179,9 @@
     <string name="jalan_kaki_tidak_menggunakan">Jalan kaki/tidak menggunakan</string>
     <string name="lokasi_anda_bekerja_di_rumah_sendiri_di_pasar_dan_lainnya">Lokasi Anda bekerja (Di rumah sendiri, Di pasar dan lainnya )?</string>
     <string name="tuliskan_semua_tempatnya">Tuliskan semua tempatnya</string>
+    <string name="waktu">Waktu : </string>
+    <string name="kegiatan">Kegiatan : </string>
+    <string name="keluarga_res">Keluarga Responden : </string>
+    <string name="nama_responden">Nama Responden : </string>
+    <string name="detail_pengisian_data">Detail Pengisian Data</string>
 </resources>

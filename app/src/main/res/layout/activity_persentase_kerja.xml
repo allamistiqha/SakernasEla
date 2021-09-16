@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".admin.listPetugas.persentase.PersentaseKerja">
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:layout_height="wrap_content">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:text="@string/persentase"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_height="wrap_content"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:id="@+id/namaPetugas"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
+    android:padding="25dp"
+    tools:context=".admin.listKegiatan.persentase.PersentaseKerja">
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="80dp"
-        android:layout_marginTop="100dp"
         android:src="@drawable/logo_petugas"
         android:layout_height="80dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:id="@+id/persen"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:elevation="10dp"
         android:layout_marginTop="25dp"
+        android:elevation="10dp"
+        android:padding="15dp"
         android:gravity="center"
         android:background="@drawable/bg_txt"
-        android:layout_height="50dp"/>
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvPetugas"
+        android:visibility="gone"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBadKoneksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/koneksi_internet_buruk"
+        android:textColor="#E60505"
+        android:textSize="30sp" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>

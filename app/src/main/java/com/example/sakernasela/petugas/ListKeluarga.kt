@@ -55,10 +55,13 @@ class ListKeluarga : AppCompatActivity() {
     }
 
     private fun onClick(dataK: DataChildKeluarga) {
+        val i = intent.extras
         val bundle = Bundle()
         val intent = Intent(this, PengisianDataKeluarga::class.java)
         bundle.putString("id", dataK.idChild)
         bundle.putString("idParent", dataK.idParent)
+        bundle.putString("namaKepala", i?.getString("nama").toString())
+        bundle.putString("namaAnggota", dataK.nama)
         intent.putExtras(bundle)
         startActivity(intent)
         finish()

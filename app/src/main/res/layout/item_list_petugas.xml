@@ -6,8 +6,8 @@
     android:text="@string/petugas"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="15dp"
-    android:textColor="@color/black"
+    android:textColor="#FFFFFFFF"
     android:textSize="20sp"
     android:textAllCaps="false"
-    android:background="@drawable/bg_button"
+    android:background="@drawable/bg_item_p"
     android:layout_height="45dp"/>

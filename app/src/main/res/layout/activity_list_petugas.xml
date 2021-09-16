@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
+    android:background="@drawable/bg_list_petugas"
     tools:context=".admin.listPetugas.ListPetugas">
 
     <androidx.appcompat.widget.AppCompatImageView

@@ -1,9 +1,863 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".admin.listPetugas.data.DetailData">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/t"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:text="@string/detail_pengisian_data"
+        android:layout_height="wrap_content"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t"
+        android:paddingTop="15dp"
+        android:background="@drawable/bg_detail"
+        android:layout_marginTop="15dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="55dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nama">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtNama"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/nomer_induk_kependudukan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtNik"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/status_perkawinan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtA"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_anda_bersekolah">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtB"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/pendidikan_tertinggi_yang_pernah_di_tamatkan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtC"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/jurusan_pendidikan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtD"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_anda_lulus_pada_periode_2021_2022">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtE"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/pernah_mendapat_sertifikat_dari_pelatihan_khusus">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtF"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_saat_ini_sedang_mengikuti_pelatihan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtFak"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/tempat_tinggal_anda_pada_februari_2017">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtG"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/gangguan_pada_penglihatan">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtH"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/gangguan_pada_pendengaran">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtI"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/gangguan_ketika_berjalan_naik_tangga">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtJ"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/gangguan_ketika_menggerakkan_tangan_jari">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtK"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/gangguan_ketika_berbicara_berkomunikasi">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtL"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/jika_mengalami_gangguan_lainnya">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtM"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/jika_bekerja_pada_minggu_ini">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtN"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/pekerjaan_lain_pada_seminggu_terakhir">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtO"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/membantu_pekerjaan_keluarga_orang_lain">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtP"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="Tetapi seminggu terakhir sedang tidak bekerja"
+                android:hint="@string/jika_memiliki_pekerjaan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtQ"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="Selama seminggu terakhir"
+                android:hint="@string/alasan_utama_anda_tidak_bekerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtR"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/jika_alasan_terkait_corona_covid19"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtS"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="Pada tempat kerja sekarang"
+                android:hint="@string/apakah_ada_jaminan_kembali_kerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtT"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/jabatan_pada_tempat_kerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtU"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="Apa yang diproduksi/dihasilkan/dijual/dilayani"
+                android:hint="@string/pada_pekerjaan_anda"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtV"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="usaha/peruhaan/kantor/tempat anda bekerja"
+                android:hint="@string/bergerak_dibidang_apakah"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtW"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_status_pekerjaan_anda"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtX"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="dari pekerjaan anda"
+                android:hint="@string/jumlah_karyawan_yang_dibayar"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtXxx"
+                    android:inputType="number"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                app:helperTextEnabled="true"
+                app:helperText="dari pekerjaan anda"
+                android:hint="@string/penghasilan_bersih_selama_sebulan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtY"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Jika dibandingkan dengan bulan februari  2021"
+                android:layout_height="wrap_content"
+                android:hint="@string/perubahan_penghasilan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtZ"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Pada pekerjaan anda sekarang"
+                android:layout_height="wrap_content"
+                android:hint="@string/kapan_mulai_bekerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAa"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Untuk mempersiapkan atau mencari pekerjaan Anda"
+                android:layout_height="wrap_content"
+                android:hint="@string/berapa_lama_waktu_yang_di_butuhkan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAaa"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Jika dikuranggi jam istirahat"
+                android:layout_height="wrap_content"
+                android:hint="@string/jumlah_jam_kerja_perhari"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtBb"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="dalam seminggu"
+                android:layout_height="wrap_content"
+                android:hint="@string/jumlah_jam_kerja_biasanya"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCc"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Jika dibandingkan dengan bulan februari 2021"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_terjadi_perubahan_jam_kerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtDd"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Dalam seminggu sebelum covid-19"
+                android:layout_height="wrap_content"
+                android:hint="@string/jumlah_jam_kerja_biasanya"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtEe"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/alasan_utama_perubahan_jam_kerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtFf"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_alasan_terkait_corona_covid_19"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtGg"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="TooManyViews" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_menggunakan_internet_pada_pekerjaan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtHh"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Apakah internet dimanfaatkan untuk"
+                android:layout_height="wrap_content"
+                android:hint="@string/promosi"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtIi"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Apakah internet dimanfaatkan untuk"
+                android:layout_height="wrap_content"
+                android:hint="@string/komunikasi"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtJj"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="TooManyViews" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Apakah internet dimanfaatkan untuk"
+                android:layout_height="wrap_content"
+                android:hint="@string/transaksi_jual_beli"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtKk"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Apakah internet dimanfaatkan untuk"
+                android:layout_height="wrap_content"
+                android:hint="@string/kegiatan_lainnya"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtLl"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Apakah Menerapkan (work frrom home)"
+                android:layout_height="wrap_content"
+                android:hint="@string/kegiatan_bekerja_dari_rumah"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtMm"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="selama bekerja dari rumah"
+                android:layout_height="wrap_content"
+                android:hint="@string/kendala_utama"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtNn"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/apakah_bekerja_di_tempat_keramaian"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtOo"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/lokasi_anda_bekerja"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPp"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="Selama seminggu terakhir"
+                android:layout_height="wrap_content"
+                android:hint="@string/bekerja_sendiri_sepenuhnya"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtQq"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="dalam seminggu terakhir"
+                android:layout_height="wrap_content"
+                android:hint="@string/lokasi_kerja_utama"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtRr"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText=" dari tempat tinggal ke kantor/tempat kerja secara rutin"
+                android:layout_height="wrap_content"
+                android:hint="@string/melakukan_perjalanan_pulang_dan_pergi"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSs"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="yang digunakan untuk berangkat ketempat kerja"
+                android:layout_height="wrap_content"
+                android:hint="@string/apa_moda_transportasi"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtTt"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="dalam seminggu terakhir"
+                android:layout_height="wrap_content"
+                android:hint="@string/memiliki_lebih_dari_satu_pekerjaan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtUu"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:helperTextEnabled="true"
+                app:helperText="dalam seminggu terakhir"
+                android:layout_height="wrap_content"
+                android:hint="@string/jumlah_jam_kerja_seluruh_pekerjaan"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtVv"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

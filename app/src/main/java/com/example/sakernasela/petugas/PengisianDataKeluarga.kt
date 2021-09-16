@@ -13,12 +13,16 @@ import androidx.appcompat.widget.AppCompatEditText
 import com.example.sakernasela.R
 import com.example.sakernasela.databinding.ActivityPengisianDataKeluargaBinding
 import com.example.sakernasela.entity.DataChildKeluarga
+import com.example.sakernasela.entity.StatisticKerja
 import com.example.sakernasela.utils.Constants
 import com.example.sakernasela.utils.Constants.DB
+import com.example.sakernasela.utils.Constants.prefManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import java.text.DateFormat
+import java.util.*
 
 @SuppressLint("SetTextI18n")
 class PengisianDataKeluarga : AppCompatActivity() {
@@ -112,6 +116,31 @@ class PengisianDataKeluarga : AppCompatActivity() {
                 }
 
             })
+
+        DB.child("StatisticKerjaan")
+            .orderByChild("idChildKeluarga")
+            .equalTo(i?.getString("id").toString())
+            .addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()){
+                        for (snap in snapshot.children){
+                            val dataA = snap.getValue(StatisticKerja::class.java)
+                            b.idKerjaan.text = dataA?.idKerjaan.toString()
+                            b.idPetugas.text = dataA?.idPetugas.toString()
+                            b.namaPetugas.text = dataA?.namaPetugas.toString()
+                            b.idParentKeluarga.text = dataA?.idParentKeluarga.toString()
+                            b.namaKeluarga.text = dataA?.namaKeluarga.toString()
+                            b.idChildKeluarga.text = dataA?.idChildKeluarga.toString()
+                            b.namaAnggotaKeluarga.text = dataA?.namaAnggotaKeluarga.toString()
+                        }
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(applicationContext, "Gagal menghubungkan", Toast.LENGTH_SHORT).show()
+                }
+            })
+
     }
 
     private fun onClick() {
@@ -1060,6 +1089,45 @@ class PengisianDataKeluarga : AppCompatActivity() {
     private fun pushData() {
         progress.show()
         val i = intent.extras
+        val currentDateTimeString = DateFormat.getDateTimeInstance().format(Date())
+
+        if (b.idChildKeluarga.text.toString() == ""){
+            val namaPetugas = prefManager.getUserName(baseContext).toString()
+            val idPetugas = prefManager.getUserId(baseContext).toString()
+            val idData = DB.push().key.toString()
+
+            val staticKerjaan = StatisticKerja(
+                idData,
+                idPetugas,
+                namaPetugas,
+                i?.getString("idParent").toString(),
+                i?.getString("namaKepala").toString(),
+                i?.getString("id").toString(),
+                i?.getString("namaAnggota").toString(),
+                "Selesai memasukkan data",
+                "Selesai",
+                currentDateTimeString.toString()
+            )
+            DB.child("StatisticKerjaan").child(idData)
+                .setValue(staticKerjaan)
+        }
+        else{
+            val idData = DB.push().key.toString()
+            val staticKerjaan = StatisticKerja(
+                idData,
+                b.idPetugas.text.toString(),
+                b.namaPetugas.text.toString(),
+                b.idParentKeluarga.text.toString(),
+                b.namaKeluarga.text.toString(),
+                b.idChildKeluarga.text.toString(),
+                b.namaAnggotaKeluarga.text.toString(),
+                "Mengubah data",
+                "Mengubah",
+                currentDateTimeString.toString()
+            )
+            DB.child("StatisticKerjaan").child(idData)
+                .setValue(staticKerjaan)
+        }
 
         val data  = DataChildKeluarga(
                     i?.getString("idParent").toString(),
@@ -1139,6 +1207,8 @@ class PengisianDataKeluarga : AppCompatActivity() {
         val bundle = Bundle()
         val intent = Intent(this, ListKeluarga::class.java)
         bundle.putString("id", i?.getString("idParent").toString())
+        bundle.putString("nama", i?.getString("namaKepala").toString())
+
         intent.putExtras(bundle)
         startActivity(intent)
         finish()

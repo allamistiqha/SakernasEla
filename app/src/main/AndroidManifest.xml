@@ -31,7 +31,7 @@
             android:name=".admin.listPetugas.data.DetailData"
             android:exported="true" />
         <activity
-            android:name=".admin.listPetugas.persentase.PersentaseKerja"
+            android:name=".admin.listKegiatan.persentase.PersentaseKerja"
             android:exported="true" />
         <activity
             android:name=".admin.pembagianData.PembagianDataPetugas"

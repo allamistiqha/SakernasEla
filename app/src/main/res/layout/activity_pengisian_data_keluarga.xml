@@ -6,6 +6,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="25dp"
     tools:context=".petugas.PengisianDataKeluarga">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/idKerjaan"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/idPetugas"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/namaPetugas"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/idParentKeluarga"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/namaKeluarga"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/idChildKeluarga"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/namaAnggotaKeluarga"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:id="@+id/t"
@@ -529,7 +577,8 @@
                     android:id="@+id/edtCc"
                     android:focusableInTouchMode="false"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    tools:ignore="TooManyViews" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout

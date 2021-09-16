@@ -57,6 +57,7 @@ class PetugasAct : AppCompatActivity() {
         val i = Intent(this, ListKeluarga::class.java)
         val bundle = Bundle()
         bundle.putString("id", dataK.idKeluarga)
+        bundle.putString("nama", dataK.kepalaKeluarga)
         i.putExtras(bundle)
         startActivity(i)
         finish()
